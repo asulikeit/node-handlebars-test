@@ -14,6 +14,14 @@ app.listen(app.get('port'), function() {
 	console.log('Node-handlebars test started on http://localhost:'	+ app.get('port'));
 });
 
-app.get('/', function(req, res) {
-	res.render('home');
+app.get(['/','/form'], function(req, res) {
+	res.render('form');
 });
+app.get('/fibonacci', function(req, res) {
+	res.render('fibonacci');
+});
+app.get('/search', function(req, res) {
+	res.render('search');
+});
+
+app.use(express.static(__dirname + '/public'));

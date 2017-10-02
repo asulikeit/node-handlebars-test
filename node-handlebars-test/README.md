@@ -5,11 +5,11 @@
 
 
 ## Usage
-
+    node handlebars-test.js 
 
 
 ## Developing
-
++ bootstrap https://startbootstrap.com/template-overviews/sb-admin-2/
 
 
 ### Tools

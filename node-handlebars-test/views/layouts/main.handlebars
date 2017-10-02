@@ -48,6 +48,10 @@
                 <a class="navbar-brand">Node-handlebars test</a>
             </div>
             <!-- /.navbar-header -->
+            
+            <ul class="nav navbar-top-links navbar-right">
+            	<span id="currtime" class="navbar-brand">time</span>
+            </ul>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -78,6 +82,14 @@
         </nav>
 
         <div id="page-wrapper">
+	        <div class="row">
+			    <div class="col-lg-12">
+	        		{{{_sections.title}}}
+	    		</div>
+	    		<!-- /.col-lg-12 -->
+			</div>
+			<!-- /.row -->
+        
         	{{{body}}}
         </div>
         <!-- /#page-wrapper -->
@@ -87,6 +99,9 @@
 
     <!-- jQuery -->
     <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/jquery/common.js"></script>
+    <script src="/js/moment.min.js"></script>
+    {{{_sections.jquery}}}
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>

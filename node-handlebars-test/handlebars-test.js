@@ -44,3 +44,24 @@ app.get('/data/timezone', function(req, res) {
 	});
 });
 
+app.get('/data/fibonacci', function(req, res) {
+	var n = req.param('number');
+	var result;
+	if (n < 0 ) {
+		result = "";
+	} else if (n == 0 || n == 1) {
+		result = n;
+	} else {
+		var i;
+		var fn = [];
+		fn[0] = 0;
+		fn[1] = 1;
+		for (i=2; i<=n; i++){
+			fn[i] = fn[i-2] + fn[i-1];
+		};
+		result = fn[n];
+	}
+	res.json({
+		fibonacci : result
+	})
+});

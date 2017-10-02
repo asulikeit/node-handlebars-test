@@ -1,6 +1,19 @@
 var FIBO = {
+	submit: function(){
+		var url = '/data/fibonacci?number=' + $('#input_fibo').val();
+		
+		$.ajax(url, {
+			success: function(data){
+				$('#span_fibo').text(data.fibonacci);
+			}
+		});
+	},
+		
 	init: function(){
-		console.log("ready");
+		$('#submit_fibo').on('click', function(event){
+			event.preventDefault();
+			FIBO.submit();
+		})
 	}
 };
 

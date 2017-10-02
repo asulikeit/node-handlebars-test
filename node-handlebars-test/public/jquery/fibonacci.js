@@ -18,6 +18,6 @@ var FIBO = {
 };
 
 $(document).ready(function(){
-	COMMON.timeset();
+	COMMON.init();
 	FIBO.init();
 });

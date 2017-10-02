@@ -29,7 +29,8 @@ app.get('/fibonacci', function(req, res) {
 	res.render('fibonacci');
 });
 app.get('/search', function(req, res) {
-	res.render('search');
+	var keyword = req.param('keyword');
+	res.render('search', {keyword : keyword});
 });
 
 // static

@@ -24,6 +24,6 @@ var FORM = {
 };
 
 $(document).ready(function() {
-	COMMON.timeset();
+	COMMON.init();
 	FORM.init();
 });

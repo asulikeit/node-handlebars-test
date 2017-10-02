@@ -58,9 +58,9 @@
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
+                                <input type="text" class="form-control" placeholder="Search..." id="input_search">
                                 <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-default" type="button" id="button_search">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
@@ -99,6 +99,11 @@
 
     <!-- jQuery -->
     <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+    	google.load("search", "1");
+    </script>
+    
     <script src="/jquery/common.js"></script>
     <script src="/js/moment.min.js"></script>
     {{{_sections.jquery}}}

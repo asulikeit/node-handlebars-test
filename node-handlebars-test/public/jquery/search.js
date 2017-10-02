@@ -1,10 +1,17 @@
 var SRCH = {
 	init: function(){
-		console.log("ready");
+		var keyword = $('span.hidden').text();
+		if(keyword) {
+			$('#gsc-i-id1').val(keyword);
+			$('input.gsc-search-button').trigger('click');
+		}
 	}
 };
 
 $(document).ready(function(){
-	COMMON.timeset();
+	COMMON.init();
+});
+
+$(document).ready(function(){
 	SRCH.init();
 });

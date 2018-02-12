@@ -45,6 +45,16 @@ app.get('/data/timezone', function(req, res) {
 	});
 });
 
+//data
+app.get('/data/timezone/test', function(req, res) {
+	var date = new Date();
+	var offset = date.getTimezoneOffset();
+	res.json({
+		offset : offset
+	});
+});
+
+
 app.get('/data/fibonacci', function(req, res) {
 	var n = req.param('number');
 	var result;
